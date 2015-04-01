@@ -1,0 +1,993 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" media="screen" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>工程信息,项目信息-中国建设工程招标网</title>
+<meta name="Keywords" content="招标,招标网,招标公告,采购公告,招标信息,工程招标,中标公示,中标结果,项目信息" />
+<meta name="Description" content="中国建设工程招标网-中国最专业招投标门户网站，及时发布全国各地招标信息、采购信息，及时搜集发布国家和地方所有重大建设项目信息" />
+
+<link href="../css2012/global.css" rel="stylesheet" type="text/css" />
+<script src="../js2012/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="../js2012/common.js" type="text/javascript"></script>
+<script src="js2012/fenlei.js" type="text/javascript"></script>
+<script src="../js2012/fenlei.js" type="text/javascript"></script>
+<script>
+$(function(){
+	$("#fenleilist,#fenleilist2,#sea_area,#sea_type").hover(
+		function(){
+			$(this).show();
+			},function(){
+				$(this).hide();});
+	
+	$("ul.tabmenu li:first-child").addClass("current");
+	$("div.tabcontent").find("div.tablayout:not(:first-child)").hide();
+	$("div.tabcontent div.tablayout").attr("id", function(){return idNumber("No")+ $("div.tabcontent div.tablayout").index(this)});
+	$("ul.tabmenu li").hover(function(){
+	var c = $("ul.tabmenu li");
+	var index = c.index(this);
+	var p = idNumber("No");
+	show(c,index,p);
+	});  
+	function show(controlMenu,num,prefix){
+	var content= prefix + num;
+	$('#'+content).siblings().hide();
+	$('#'+content).show();
+	controlMenu.eq(num).addClass("current").siblings().removeClass("current");
+	};
+	function idNumber(prefix){
+	var idNum = prefix;
+	return idNum;
+	};
+})
+function showDiv(obj,vtop,vleft,id){
+	if(id!=0){
+		$("#"+obj).css({
+			"display":"block",
+			"position":"absolute",
+			"top":vtop,
+			"left":vleft
+		});
+		var out="";
+		for(var i=0;i<fenleiarr[id-1].length;i++){
+			out += "<a href='"+fenleiarr[id-1][i][0]+" ' target='_blank'>"+fenleiarr[id-1][i][1]+"<\/a>";
+			}
+			$("#"+obj).html(out);
+		//$.get("getfenlei.php?id="+id, function(data){
+  		//	$("#"+obj).html(data);
+		//});
+	}
+	}
+function hideDiv(obj){
+	$("#"+obj).css({
+		"display":"none"
+		})
+	}
+		
+</script>
+
+
+</head>
+<body>
+<div class="topnav">
+	<div class="width">
+<script src="http://www.projectbidding.cn/js2012/msnewindex.js" type="text/javascript"></script>
+   	<Script Language="javascript" src="http://www.projectbidding.cn/zbuser2/IndexLogin.jsp"></Script>
+<div class="menu">
+        	 <a href="http://www.projectbidding.cn/">首页</a>┆<a href="http://projectbidding.cn/syxx/hyfw/2012/09/10140215140823.html">服务项目</a>┆&nbsp;&nbsp;<a href="http://www.projectbidding.cn/zbuser2/users/TableWay.jsp">创建桌面图标</a>┆&nbsp;&nbsp;<a href="#" onclick="javascript:AddFavorite('http://www.projectbidding.cn/', '中国建设工程招标网首页');return false;" title="中国建设工程招标网首页" target="_blank">添加收藏夹</a></div>
+    </div>
+</div>
+<div class="sonlogo">
+	<a href="http://www.projectbidding.cn"><img src="http://www.projectbidding.cn/images2012/logo.jpg" class="logopic" /></a>   
+ <h1>项目信息频道<i>project Channel</i></h1>
+<div class="smenu">
+    	<ul class="lia_blue">
+        	<li><a href="http://zbxx.projectbidding.cn/" target="_blank" class="stit">招标信息</a><a href="http://www.projectbidding.cn/zbxx/zbgg/gczb/index.html" target="_blank">工程招标</a>┆<a href="http://www.projectbidding.cn/zbxx/zbgg/sbzb/index.html" target="_blank">设备招标</a>┆<a href="http://www.projectbidding.cn/zbxx/zbybxd/index.html" target="_blank">招标议标先导</a>┆<a href="http://www.projectbidding.cn/zbxx/zbgs/index.html" target="_blank">中标公示</a>┆<a href="http://www.projectbidding.cn/zbxx/zbjg/index.html" target="_blank">招标机构</a></li>
+            <li><a href="http://www.projectbidding.cn/xmxx/index.html" class="stit" target="_blank">项目信息</a><a href="http://www.projectbidding.cn/xmxx/gcxmxx/nzjxm/index.html" target="_blank">拟建在建</a>┆<a href="http://www.projectbidding.cn/xmxx/xmdt/index.html" target="_blank">项目动态</a>┆<a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/index.html" target="_blank">重点项目跟进</a>┆<a href="http://www.projectbidding.cn/xmxx/ndjcqxm/index.html" target="_blank">年度项目</a>┆<a href="http://www.projectbidding.cn/xmxx/ztxm/index.html" target="_blank">专题项目</a></li>
+           <li><a href="http://www.projectbidding.cn/hyzx/index.html" target="_blank" class="stit">行业资讯</a><a href="http://www.projectbidding.cn/hyzx/zcll/wszs/index.html" target="_blank">招标实务</a>┆<a href="http://www.projectbidding.cn/hyzx/zcll/index.html" target="_blank">政策理论</a>┆<a href="http://www.projectbidding.cn/hyzx/gcgl/index.html" target="_blank">工程项目管理</a>┆<a href="http://www.projectbidding.cn/hyzx/hydt/index.html" target="_blank">经济要闻</a>┆<a href="http://www.projectbidding.cn/hyzx/scfx/index.html" target="_blank">市场分析</a></li>	
+        </ul>
+    </div>  
+</div>
+<div class="snav">
+	<ul>
+    	<li><a href="/xmxx/index.html" target="_blank">首　　页</a></li>
+        <li><a href="/xmxx/xmdt/index.html" target="_blank">项目动态</a></li>
+        <li><a href="/xmxx/xmkx/index.html" target="_blank">项目快讯</a></li>
+        <li><a href="/xmxx/gcxmxx/nzjxm/index.html" target="_blank">拟建在建</a></li>
+        <li><a href="/xmxx/gcxmxx/ck108/index.html" target="_blank">重点项目跟进</a></li>
+        <li><a href="/xmxx/ndjcqxm/index.html" target="_blank">年度项目</a></li>
+        <li><a href="/xmxx/ztxm/index.html" target="_blank">专题项目</a></li>
+        <li><a href="/xmxx/gjxm/index.html" target="_blank">国际项目</a></li>
+        <li><a href="/xmxx/zsyz/index.html" target="_blank">招商引资</a></li>
+    </ul>
+</div>
+
+ <div class="width">
+	<div class="sea_comm border">
+    	<form action="http://www.projectbidding.cn/search/xiangmu.html?"  target="_blank" method="get">
+        	<table cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td height="40"><input type="text" name="keyword" class="sea_key" value="" onfocus="this.value=''" style="width:420px;" /></td>
+<td align="left" style="display: none; "><input type="text" name="classid" class="sea_key" value="13,108,163,14,15,16,18,118|所有项目分类" onfocus="this.value=''" /></td>
+                    <td width="100" align="right"><select name="date" class="sea_date"><option value="" selected="selected">所有时间</option><option value="三天内" >三天内</option><option value="一周内" >一周内</option><option value="一个月内" >一个月内</option><option value="半年内" >半年内</option><option value="一年内" >一年内</option></select></td>
+                    <td width="80" align="center"><select name="specialname" class="sea_date"><option value="">-所有地区-</option>                           <option style="color:red;" value="北京,天津,河北,山西,内蒙古|华北">华北</option>
+		    			<option value="北京|北京">北京</option>
+		    			<option value="天津|天津">天津</option>
+		    			<option value="河北|河北">河北</option>
+		    			<option value="山西|山西">山西</option>
+		    			<option value="内蒙古|内蒙古">内蒙古</option>
+                                   <option style="color:red;" value="吉林,辽宁,黑龙江|东北">东北</option>
+		    			<option value="吉林|吉林">吉林</option>
+		    			<option value="辽宁|辽宁">辽宁</option>
+		    			<option value="黑龙江|黑龙江">黑龙江</option>
+                            <option style="color:red;" value="陕西,甘肃,宁夏,新疆,青海|西北">西北</option>
+		    			<option value="陕西|陕西">陕西</option>
+		    			<option value="甘肃|甘肃">甘肃</option>
+		    			<option value="宁夏|宁夏">宁夏</option>
+		    			<option value="新疆|新疆">新疆</option>
+		    			<option value="青海|青海">青海</option>
+                            <option style="color:red;" value="山东,安徽,上海,江苏,浙江,福建,江西|华东">华东</option>
+		    			<option value="山东|山东">山东</option>
+		    			<option value="安徽|安徽">安徽</option>
+		    			<option value="上海|上海">上海</option>
+		    			<option value="江苏|江苏">江苏</option>
+		    			<option value="浙江|浙江">浙江</option>
+		    			<option value="福建|福建">福建</option>
+<option value="江西|江西">江西</option>
+
+                           <option style="color:red;" value="湖北,河南,湖南|华中">华中</option>
+		    			<option value="湖北|湖北">湖北</option>
+		    			<option value="河南|河南">河南</option>
+		    			<option value="湖南|湖南">湖南</option>
+		    			                           <option style="color:red;" value="广东,广西,海南|华南">华南</option>
+		    			<option value="广东|广东">广东</option>
+		    			<option value="广西|广西">广西</option>
+		    			<option value="海南|海南">海南</option>
+                          <option style="color:red;" value="云南,贵州,重庆,四川,西藏|西南">西南</option>
+		    			<option value="云南|云南">云南</option>
+		    			<option value="贵州|贵州">贵州</option>
+		    			<option value="重庆|重庆">重庆</option>
+		    			<option value="四川|四川">四川</option>
+		    			<option value="西藏|西藏">西藏</option>
+                                        <option value="跨省|跨省">跨省</option>
+		    			<option value="国际|国际">国际</option>
+		    			
+					</select>         </td>
+                    <td width="120"> <select name="hangye" class="sea_date">  <option value="">-所有类型-</option>
+		    			<option value="电力项目|电力项目">电力项目</option>
+		    			<option value="冶金矿产|冶金矿产">冶金矿产</option>
+		    			<option value="化工医药|化工医药">化工医药</option>
+		    			<option value="建材项目|建材项目">建材项目</option>
+		    			<option value="机械电子|机械电子">机械电子</option>
+		    			<option value="环保项目|环保项目">环保项目</option>
+		    			<option value="市政项目|市政项目">市政项目</option>
+		    			<option value="房产建筑|房产建筑">房产建筑</option>
+		    			<option value="交通运输|交通运输">交通运输</option>
+		    			<option value="轻纺食品|轻纺食品">轻纺食品</option>
+		    			<option value="能源项目|能源项目">能源项目</option>
+		    			<option value="农林水利|农林水利">农林水利</option>
+		    			<option value="文教旅游|文教旅游">文教旅游</option>
+		    			<option value="其他项目|其他项目">其他项目</option>					</select>  </td>
+					<td><input type="image" src="../images2012/sea_go.jpg" /></td>
+					<td align="right" width="75"><a href="http://www.projectbidding.cn/search/xiangmuadvanced.jsp?keyword=&classid=13%2C108%2C163%2C14%2C15%2C16%2C18%2C118%7C%E6%89%80%E6%9C%89%E9%A1%B9%E7%9B%AE%E5%88%86%E7%B1%BB&date=&specialname=&hangye=" target="_blank"><img src="../images2012/sea_more.jpg" /></a></td>
+				</tr>
+			</table>
+            <div id="sea_area" class="border fenlei" style="width:350px; display:none">
+            	<table cellpadding="0" cellspacing="0" border="0">
+            		<tr>
+                		<td width="60" height="30" align="center" class="fcred">【华北】</td>
+                    	<td><input type="checkbox" /> 北京 <input type="checkbox" /> 天津 <input type="checkbox" /> 河北 <input type="checkbox" /> 山西 <input type="checkbox" /> 内蒙古</td>
+              		</tr>
+            		<tr>
+            	  		<td height="30" align="center" class="fcred">【东北】</td>
+            	  		<td><input type="checkbox" /> 吉林 <input type="checkbox" /> 辽宁 <input type="checkbox" /> 黑龙江</td>
+          	  		</tr>
+            		<tr>
+            	  		<td height="30" align="center" class="fcred">【西北】</td>
+            	  		<td><input type="checkbox" /> 陕西 <input type="checkbox" /> 甘肃 <input type="checkbox" /> 宁夏 <input type="checkbox" /> 青海 <input type="checkbox" /> 新疆</td>
+          	  		</tr>
+            		<tr>
+            	  		<td height="30" align="center" class="fcred">【华东】</td>
+            	  		<td><input type="checkbox" /> 山东 <input type="checkbox" /> 安徽 <input type="checkbox" /> 上海 <input type="checkbox" /> 江苏 <input type="checkbox" /> 浙江 <input type="checkbox" /> 福建</td>
+          	  		</tr>
+            		<tr>
+            	  		<td height="30" align="center" class="fcred">【华中】</td>
+            	  		<td><input type="checkbox" /> 河南 <input type="checkbox" /> 湖北 <input type="checkbox" /> 湖南 <input type="checkbox" /> 江西</td>
+          	  		</tr>
+            		<tr>
+            	  		<td height="30" align="center" class="fcred">【华南】</td>
+            	  		<td><input type="checkbox" /> 广东 <input type="checkbox" /> 广西 <input type="checkbox" /> 海南</td>
+          	  		</tr>
+            		<tr>
+            	  		<td height="30" align="center" class="fcred">【西南】</td>
+            	  		<td><input type="checkbox" /> 云南 <input type="checkbox" /> 贵州 <input type="checkbox" /> 四川 <input type="checkbox" /> 重庆 <input type="checkbox" /> 西藏</td>
+          	  		</tr>
+            		<tr>
+            	  		<td height="30" align="center" class="fcred">【其他】</td>
+            	  		<td><input type="checkbox" /> 其他</td>
+          	  		</tr>
+            	</table>
+            </div>
+            <div id="sea_type" class="border fenlei sea_type" style="width:480px; display:none">
+            	<ul>
+                	<li><input type="checkbox"  /> 水利桥梁建筑</li>
+                    <li><input type="checkbox"  /> 艺术工艺</li>
+                    <li><input type="checkbox"  /> 冶金矿产原材料</li>
+                    <li><input type="checkbox"  /> 电脑网络计算机</li>
+                    <li><input type="checkbox"  /> 交通运输</li>
+                    <li><input type="checkbox"  /> 水利桥梁建筑</li>
+                    <li><input type="checkbox"  /> 艺术工艺</li>
+                    <li><input type="checkbox"  /> 冶金矿产原材料</li>
+                    <li><input type="checkbox"  /> 电工电子电器</li>
+                    <li><input type="checkbox"  /> 电脑网络计算机</li>
+                    <li><input type="checkbox"  /> 交通运输</li>
+                    <li><input type="checkbox"  /> 水利桥梁建筑</li>
+                    <li><input type="checkbox"  /> 艺术工艺</li>
+                    <li><input type="checkbox"  /> 冶金矿产原材料</li>
+                    <li><input type="checkbox"  /> 电工电子电器</li>
+                    <li><input type="checkbox"  /> 电脑网络计算机</li>
+                    <li><input type="checkbox"  /> 交通运输</li>
+                    <li><input type="checkbox"  /> 水利桥梁建筑</li>
+                    <li><input type="checkbox"  /> 艺术工艺</li>
+                    <li><input type="checkbox"  /> 冶金矿产原材料</li>
+                    <li><input type="checkbox"  /> 电工电子电器</li>
+                    <li><input type="checkbox"  /> 电脑网络计算机</li>
+                    <li><input type="checkbox"  /> 交通运输</li>
+                    <li><input type="checkbox"  /> 水利桥梁建筑</li>
+                    <li><input type="checkbox"  /> 艺术工艺</li>
+                    <li><input type="checkbox"  /> 冶金矿产原材料</li>
+                    <li><input type="checkbox"  /> 电工电子电器</li>
+                    <li><input type="checkbox"  /> 电脑网络计算机</li>
+                    <li><input type="checkbox"  /> 交通运输</li>
+                    <li><input type="checkbox"  /> 水利桥梁建筑</li>
+                    <li><input type="checkbox"  /> 艺术工艺</li>
+                    <li><input type="checkbox"  /> 冶金矿产原材料</li>
+                    <li><input type="checkbox"  /> 电工电子电器</li>
+                    <li><input type="checkbox"  /> 电脑网络计算机</li>
+                    <li><input type="checkbox"  /> 交通运输</li>
+                    <li><input type="checkbox"  /> 水利桥梁建筑</li>
+                    <li><input type="checkbox"  /> 艺术工艺</li>
+                    <li><input type="checkbox"  /> 冶金矿产原材料</li>
+                    <li><input type="checkbox"  /> 电工电子电器</li>
+                    <li><input type="checkbox"  /> 电脑网络计算机</li>
+                    <li><input type="checkbox"  /> 交通运输</li>
+                </ul>
+            </div>
+        </form>
+	</div>
+</div> 
+<div class="width mart8">
+<table cellpadding="0" cellspacing="0" border="0"><tr><td>
+ 
+ <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="650" height="95">
+        <param name="movie" value="http://www.projectbidding.cn/upfile/2012/12/1275038612.swf">
+        <param name="quality" value="high">
+        <param name="wmode" value="transparent">
+        <embed src="http://www.projectbidding.cn/upfile/2012/12/1275038612.swf" width="650" height="95" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" wmode="transparent"></embed></object></td> 
+<td>
+<div  class="floatright"  style="margin:0 0 0 5px;">
+<a href=http://www.chendongtech.com/ target=_blank><img src="http://www.projectbidding.cn/upfile/2013/11/285414415.gif" width="320" height="90" border=""0 /></a></div>
+</td> 
+ </table> 
+ </div>
+ <div class="width mart8 padt1">
+	<div class="condiv">
+    	<div class="border" style="height:150px;overflow:visible">
+  		<div class="title" >
+  		  	<h2>行业分类</h2></div>
+    		<div class="fenlei" style="height:120px" >
+  			<ul>
+    		<li onmouseover="showDiv('fenleilist2',9,68,52)" onmouseout="hideDiv('fenleilist2')"><a href="http://www.projectbidding.cn/search/xiangmu.html?classid=13,108,163,14,15,16,18,118|所有项目分类&keyword=&date=&specialname=&hangye=电力项目|电力项目"target="_blank">电力项目</a></li>
+                <li onmouseover="showDiv('fenleilist2',9,145,53)" onmouseout="hideDiv('fenleilist2')"><a href="http://www.projectbidding.cn/search/xiangmu.html?classid=13,108,163,14,15,16,18,118|所有项目分类&keyword=&date=&specialname=&hangye=冶金矿产|冶金矿产"target="_blank">冶金矿产</a></li>
+                <li onmouseover="showDiv('fenleilist2',9,222,54)" onmouseout="hideDiv()"><a href="http://www.projectbidding.cn/search/xiangmu.html?classid=13,108,163,14,15,16,18,118|所有项目分类&keyword=&date=&specialname=&hangye=化工医药|化工医药"target="_blank">化工医药</a></li>
+                <li onmouseover="showDiv('fenleilist2',9,298,55)" onmouseout="hideDiv()"><a href="http://www.projectbidding.cn/search/xiangmu.html?classid=13,108,163,14,15,16,18,118|所有项目分类&keyword=&date=&specialname=&hangye=建材项目|建材项目"target="_blank">建材项目</a></li>
+                <li onmouseover="showDiv('fenleilist2',39,68,56)" onmouseout="hideDiv()"><a href="http://www.projectbidding.cn/search/xiangmu.html?classid=13,108,163,14,15,16,18,118|所有项目分类&keyword=&date=&specialname=&hangye=环保项目|环保项目"target="_blank">环保项目</a></li>
+                <li onmouseover="showDiv('fenleilist2',39,145,57)" onmouseout="hideDiv()"><a href="http://www.projectbidding.cn/search/xiangmu.html?classid=13,108,163,14,15,16,18,118|所有项目分类&keyword=&date=&specialname=&hangye=市政项目|市政项目"target="_blank">市政项目</a></li>
+                <li onmouseover="showDiv('fenleilist2',39,222,58)" onmouseout="hideDiv()"><a href="http://www.projectbidding.cn/search/xiangmu.html?classid=13,108,163,14,15,16,18,118|所有项目分类&keyword=&date=&specialname=&hangye=房产建筑|房产建筑"target="_blank">房产建筑</a></li>
+                <li onmouseover="showDiv('fenleilist2',39,298,59)" onmouseout="hideDiv()"><a href="http://www.projectbidding.cn/search/xiangmu.html?classid=13,108,163,14,15,16,18,118|所有项目分类&keyword=&date=&specialname=&hangye=交通运输|交通运输"target="_blank"> 交通运输</a></li>
+                <li onmouseover="showDiv('fenleilist2',69,68,60)" onmouseout="hideDiv()"><a href="http://www.projectbidding.cn/search/xiangmu.html?classid=13,108,163,14,15,16,18,118|所有项目分类&keyword=&date=&specialname=&hangye=轻纺食品|轻纺食品"target="_blank">轻纺食品</a></li>
+                <li onmouseover="showDiv('fenleilist2',69,145,61)" onmouseout="hideDiv()"><a href="http://www.projectbidding.cn/search/xiangmu.html?classid=13,108,163,14,15,16,18,118|所有项目分类&keyword=&date=&specialname=&hangye=能源项目|能源项目"target="_blank">能源项目</a></li>
+                <li onmouseover="showDiv('fenleilist2',69,222,62)" onmouseout="hideDiv()"><a href="http://www.projectbidding.cn/search/xiangmu.html?classid=13,108,163,14,15,16,18,118|所有项目分类&keyword=&date=&specialname=&hangye=农林水利|农林水利"target="_blank">农林水利</a></li>
+                <li onmouseover="showDiv('fenleilist2',69,298,63)" onmouseout="hideDiv()"><a href="http://www.projectbidding.cn/search/xiangmu.html?classid=13,108,163,14,15,16,18,118|所有项目分类&keyword=&date=&specialname=&hangye=机械电子|机械电子"target="_blank">机械电子</a></li>
+                <li onmouseover="showDiv('fenleilist2',99,68,0)" onmouseout="hideDiv()"><a href="http://www.projectbidding.cn/search/xiangmu.html?classid=13,108,163,14,15,16,18,118|所有项目分类&keyword=&date=&specialname=&hangye=其他项目|其他项目"target="_blank">其他项目</a></li>
+              	</ul>
+            <div class="clear"></div>
+            <div id="fenleilist2">
+            	<a href="#">园林</a>
+                <a href="#">绿化</a>
+                <a href="#">景观</a>
+                <a href="#">照明</a>
+                <a href="#">灯光</a>
+                <a href="#">喷泉</a>
+                <a href="#">喷灌</a>
+                <a href="#">水幕</a>
+                <a href="#">雕塑</a>
+                <a href="#">草坪</a>
+                <a href="#">亮化工程</a>
+            </div>
+        </div>
+		</div>
+        
+      <div class="border area_con" style="margin-top:-1px;">
+  		<div class="title">
+  		  	<h2>地区招标</h2></div>
+    		<div class="fenlei lia_blue">
+                       	<table cellpadding="0" cellspacing="0" border="0">
+            	<tr>
+                	<td width="80" height="30" align="center" class="fcred"><a href="http://huabei.projectbidding.cn" target="_blank"><font color="CE0000">【华 北】</font> </a></td>
+       <td><a href="http://bj.projectbidding.cn" target="_blank">北京</a> <a href="http://tj.projectbidding.cn" target="_blank">天津</a> <a href="http://hb.projectbidding.cn" target="_blank">河北</a> 
+
+<a href="http://sx.projectbidding.cn" target="_blank">山西</a> <a href="http://nmg.projectbidding.cn" target="_blank">内蒙古</a></td>
+              </tr>
+            	<tr>
+            	  <td height="30" align="center" class="fcred"><a href="http://dongbei.projectbidding.cn" target="_blank"><font color="CE0000">【东 北】</font> </a></td>
+            	  <td><a href="http://jl.projectbidding.cn" target="_blank">吉林</a> <a href="http://ln.projectbidding.cn" target="_blank">辽宁</a> <a href="http://hlj.projectbidding.cn" target="_blank"> 黑龙江</a>  </td>
+          	  </tr>
+            	<tr>
+            	  <td height="30" align="center" class="fcred""><a href="http://xibei.projectbidding.cn" target="_blank"><font color="CE0000">【西 北】</font> </a></td>
+            	  <td>  <a href="http://shanxi.projectbidding.cn" target="_blank">陕西</a> <a href="http://gs.projectbidding.cn" target="_blank"> 甘肃</a><a href="http://nx.projectbidding.cn" target="_blank"> 宁夏</a>     <a href="http://xj.projectbidding.cn" target="_blank"> 新疆</a>   <a href="http://qh.projectbidding.cn" target="_blank">  青海</a>  </td>
+          	  </tr>
+            	<tr>
+            	  <td height="30" align="center" class="fcred""><a href="http://huadong.projectbidding.cn" target="_blank"><font color="CE0000">【华 东】</font> </a></td>
+            	  <td><a href="http://sd.projectbidding.cn" target="_blank">  山东</a> <a href="http://ah.projectbidding.cn" target="_blank">  安徽</a> <a href="http://sh.projectbidding.cn" target="_blank">  上海</a> <a href="http://js.projectbidding.cn" target="_blank">  江苏</a> <a href="http://zj.projectbidding.cn" target="_blank">  浙江</a> <a href="http://fj.projectbidding.cn" target="_blank">  福建</a>
+<a href="http://jiangxi.projectbidding.cn" target="_blank">  江西</a></td>
+          	  </tr>
+            	<tr>
+            	  <td height="30" align="center" class="fcred""><a href="http://huazhong.projectbidding.cn" target="_blank"><font color="CE0000">【华 中】</font> </a></td>
+            	  <td><a href="http://hubei.projectbidding.cn" target="_blank">  湖北</a> <a href="http://henan.projectbidding.cn" target="_blank">  河南</a> <a href="http://hunan.projectbidding.cn" target="_blank">  湖南</a>  </td>
+          	  </tr>
+            	<tr>
+            	  <td height="30" align="center" class="fcred""><a href="http://huanan.projectbidding.cn" target="_blank"><font color="CE0000">【华 南】</font> </a></td>
+            	  <td><a href="http://gd.projectbidding.cn" target="_blank"> 广东</a><a href="http://gx.projectbidding.cn" target="_blank">  广西</a><a href="http://hainan.projectbidding.cn" target="_blank">  海南</a></td>
+          	  </tr>
+            	<tr>
+            	  <td height="30" align="center" class="fcred""><a href="http://xinan.projectbidding.cn" target="_blank"><font color="CE0000">【西 南】</font> </a></td>
+            	  <td><a href="http://yn.projectbidding.cn" target="_blank">  云南</a><a href="http://gz.projectbidding.cn" target="_blank">  贵州</a><a href="http://cq.projectbidding.cn" target="_blank">  重庆</a><a href="http://sc.projectbidding.cn" target="_blank">  四川</a><a href="http://xz.projectbidding.cn" target="_blank">  西藏</a></td>
+          	  </tr>
+            	<tr>
+            	  <td height="30" align="center" class="fcred">【其 他】</td>
+            	  <td><a href="http://ks.projectbidding.cn" target="_blank">  跨省</a><a href="http://gj.projectbidding.cn" target="_blank">  国际</a></td>
+          	  </tr>
+            	</table>       	  	       	  </div>
+		</div>
+    </div>
+    <div class="condivright">
+    	<div class="condiv">
+  		<div class="border" style="height:209px">
+  		<div class="title">
+  		  <h2>项目动态</h2><a href="/xmxx/xmdt" class="floatright" target="_blank">更多>></a></div>
+    		<div class="listcon lih28 libg lia14 lia_blue li_date">
+  			<ul>
+		
+  			  <li>
+               <a href="http://www.projectbidding.cn/xmxx/xmdt/2015/03/30180008775322.html" target="_blank" title="农业项目获备案"> 农业项目获备案</a>
+         <span>03-30</span>
+                </li>  
+  			  <li>
+               <a href="http://www.projectbidding.cn/xmxx/xmdt/2015/03/30175952837575.html" target="_blank" title="乳业项目获备案"> 乳业项目获备案</a>
+         <span>03-30</span>
+                </li>  
+  			  <li>
+               <a href="http://www.projectbidding.cn/xmxx/xmdt/2015/03/301759371187.html" target="_blank" title="石材项目获备案"> 石材项目获备案</a>
+         <span>03-30</span>
+                </li>  
+  			  <li>
+               <a href="http://www.projectbidding.cn/xmxx/xmdt/2015/03/30175915697390.html" target="_blank" title="混凝土建设项目获备案"> 混凝土建设项目获备案</a>
+         <span>03-30</span>
+                </li>  
+  			  <li>
+               <a href="http://www.projectbidding.cn/xmxx/xmdt/2015/03/30175903259405.html" target="_blank" title="汽车项目获备案"> 汽车项目获备案</a>
+         <span>03-30</span>
+                </li>  
+  			  <li>
+               <a href="http://www.projectbidding.cn/xmxx/xmdt/2015/03/30175846415723.html" target="_blank" title="基础设施建设项目获备案"> 基础设施建设项目获备案</a>
+         <span>03-30</span>
+                </li>      		</ul>
+        </div>
+	</div>
+  	</div>
+    
+    <div class="condiv marl10">
+  	<div class="border" style="height:209px">
+  		<div class="title">
+  		  <h2>年度及长期项目</h2>
+  		  <a href="/xmxx/ndjcqxm" class="floatright" target="_blank">更多>></a></div>
+    	<div class="listcon lih28 libg lia14 lia_blue li_date">
+  			<ul>
+    			
+  			  <li>
+               <a href="http://www.projectbidding.cn/xmxx/ndjcqxm/2015/03/28120222196714.html" target="_blank" title="2015年重大项目名单"> 2015年重大项目名单</a>
+         <span>03-28</span>
+                </li>  
+  			  <li>
+               <a href="http://www.projectbidding.cn/xmxx/ndjcqxm/2015/03/28120228303171.html" target="_blank" title="2015年重大项目名单"> 2015年重大项目名单</a>
+         <span>03-28</span>
+                </li>  
+  			  <li>
+               <a href="http://www.projectbidding.cn/xmxx/ndjcqxm/2015/03/28115920563130.html" target="_blank" title="2015重大投资项目投资计划表"> 2015重大投资项目投资计划表</a>
+         <span>03-28</span>
+                </li>  
+  			  <li>
+               <a href="http://www.projectbidding.cn/xmxx/ndjcqxm/2015/03/2811534580316.html" target="_blank" title="2015年重大项目"> 2015年重大项目</a>
+         <span>03-28</span>
+                </li>  
+  			  <li>
+               <a href="http://www.projectbidding.cn/xmxx/ndjcqxm/2015/03/28115420446864.html" target="_blank" title="2015年重大项目"> 2015年重大项目</a>
+         <span>03-28</span>
+                </li>  
+  			  <li>
+               <a href="http://www.projectbidding.cn/xmxx/ndjcqxm/2015/03/28114623179590.html" target="_blank" title="2015年重大项目"> 2015年重大项目</a>
+         <span>03-28</span>
+                </li>        		</ul>
+        </div>
+	</div>
+  	</div>
+
+    
+  	    
+    
+    <div class="condiv">
+  	<div class="border" style="height:209px">
+  		<div class="title">
+  		  <h2>重点项目跟进</h2><a href="/xmxx/gcxmxx/ck108/index.html" class="floatright" target="_blank">更多>></a></div>
+    	<div class="listcon lih28 libg lia14 lia_blue li_date">
+  			<ul>
+    			
+  			  <li>
+               <a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/03/08222312616745.html" target="_blank" title="公路工程（更新）"> 公路工程（更新）</a>
+         <span>03-30</span>
+                </li>  
+  			  <li>
+               <a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/01/26214144978894.html" target="_blank" title="学校项目（更新）"> 学校项目（更新）</a>
+         <span>03-30</span>
+                </li>  
+  			  <li>
+               <a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2014/10/20215058935940.html" target="_blank" title="商业街项目（更新）"> 商业街项目（更新）</a>
+         <span>03-30</span>
+                </li>  
+  			  <li>
+               <a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/03/30221806165975.html" target="_blank" title="医院工程"> 医院工程</a>
+         <span>03-30</span>
+                </li>  
+  			  <li>
+               <a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/03/30221805337511.html" target="_blank" title="河流治理工程"> 河流治理工程</a>
+         <span>03-30</span>
+                </li>  
+  			  <li>
+               <a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/03/30221804697955.html" target="_blank" title="河流治理工程"> 河流治理工程</a>
+         <span>03-30</span>
+                </li>        		</ul>
+        </div>
+	</div>
+  	</div>
+    <div class="condiv marl10">
+  	<div class="border" style="height:209px">
+  		<div class="title">
+  		  <h2>拟在建项目</h2><a href="/xmxx/gcxmxx/nzjxm/index.html" class="floatright" target="_blank">更多>></a></div>
+    	<div class="listcon lih28 libg lia14 lia_blue li_date">
+  			<ul>
+    			
+  			  <li>
+               <a href="http://www.projectbidding.cn/xmxx/gcxmxx/nzjxm/2015/03/30104804025988.html" target="_blank" title="冷粘鞋技改项目"> 冷粘鞋技改项目</a>
+         <span>03-30</span>
+                </li>  
+  			  <li>
+               <a href="http://www.projectbidding.cn/xmxx/gcxmxx/nzjxm/2015/03/30115749400582.html" target="_blank" title="中居博雅园项目"> 中居博雅园项目</a>
+         <span>03-30</span>
+                </li>  
+  			  <li>
+               <a href="http://www.projectbidding.cn/xmxx/gcxmxx/nzjxm/2015/03/30115605853230.html" target="_blank" title="旭辉朗香郡项目"> 旭辉朗香郡项目</a>
+         <span>03-30</span>
+                </li>  
+  			  <li>
+               <a href="http://www.projectbidding.cn/xmxx/gcxmxx/nzjxm/2015/03/30115652056549.html" target="_blank" title="民政事业服务中心项目"> 民政事业服务中心项目</a>
+         <span>03-30</span>
+                </li>  
+  			  <li>
+               <a href="http://www.projectbidding.cn/xmxx/gcxmxx/nzjxm/2015/03/30115644618800.html" target="_blank" title="实验小学项目"> 实验小学项目</a>
+         <span>03-30</span>
+                </li>  
+  			  <li>
+               <a href="http://www.projectbidding.cn/xmxx/gcxmxx/nzjxm/2015/03/30115641087797.html" target="_blank" title="中学建设项目"> 中学建设项目</a>
+         <span>03-30</span>
+                </li>           		</ul>
+        </div>
+	</div>
+  	</div>
+
+    
+    
+  	  	    </div>
+    <div class="clear"></div>
+</div>
+<div class="width mart8">
+<table cellpadding="0" cellspacing="0" border="0"><tr><td>
+ 
+ <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="650" height="95">
+        <param name="movie" value="http://www.projectbidding.cn/upfile/2014/04/504411042.swf">
+        <param name="quality" value="high">
+        <param name="wmode" value="transparent">
+        <embed src="http://www.projectbidding.cn/upfile/2014/04/504411042.swf" width="650" height="95" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" wmode="transparent"></embed></object></td> 
+<td>
+<div  class="floatright"  style="margin:0 0 0 5px;">
+<a href=http://www.ygtmjc.com target=_blank><img src="http://www.projectbidding.cn/upfile/2014/04/1243261623.gif" width="320" height="90" border=""0 /></a></div>
+</td> 
+ </table> 
+ </div>
+<div class="width mart8 padt1">
+  	    
+    <div class="condiv">
+  	<div class="border" style="height:209px">
+  		<div class="title">
+  		  <h2>招商引资</h2><a href="/xmxx/zsyz" class="floatright" target="_blank">更多>></a></div>
+    	<div class="listcon lih28 libg lia14 lia_blue li_date">
+  			<ul>
+    			
+  			  <li>
+               <a href="http://www.projectbidding.cn/xmxx/zsyz/2015/03/281232331294.html" target="_blank" title="天下驿站建设项目 "> 天下驿站建设项目 </a>
+         <span>03-28</span>
+                </li>  
+  			  <li>
+               <a href="http://www.projectbidding.cn/xmxx/zsyz/2015/03/28123250794808.html" target="_blank" title="文化风情街项目"> 文化风情街项目</a>
+         <span>03-28</span>
+                </li>  
+  			  <li>
+               <a href="http://www.projectbidding.cn/xmxx/zsyz/2015/03/28123125624248.html" target="_blank" title="国际赛马场建设项目 "> 国际赛马场建设项目 </a>
+         <span>03-28</span>
+                </li>  
+  			  <li>
+               <a href="http://www.projectbidding.cn/xmxx/zsyz/2015/03/28123156237680.html" target="_blank" title="体验区项目 "> 体验区项目 </a>
+         <span>03-28</span>
+                </li>  
+  			  <li>
+               <a href="http://www.projectbidding.cn/xmxx/zsyz/2015/03/28123054199395.html" target="_blank" title="体验园建设项目 "> 体验园建设项目 </a>
+         <span>03-28</span>
+                </li>  
+  			  <li>
+               <a href="http://www.projectbidding.cn/xmxx/zsyz/2015/03/28123108303863.html" target="_blank" title="基地建设项目 "> 基地建设项目 </a>
+         <span>03-28</span>
+                </li>      		</ul>
+        </div>
+	</div>
+  	</div>
+
+    
+  	    
+    
+    
+  	<div class="condiv marl10">
+  	<div class="border" style="height:209px">
+  		<div class="title">
+  		  <h2>国际项目</h2><a href="/xmxx/gjxm" class="floatright" target="_blank">更多>></a></div>
+    	<div class="listcon lih28 libg lia14 lia_blue li_date">
+  			<ul>
+    			
+				
+  			  <li>
+               <a href="http://www.projectbidding.cn/xmxx/gjxm/2014/05/01115805363549.html" target="_blank" title="肯商变压器采购"> 肯商变压器采购</a>
+         <span>05-01</span>
+                </li>  
+  			  <li>
+               <a href="http://www.projectbidding.cn/xmxx/gjxm/2014/05/01115726390775.html" target="_blank" title="螺钉、铁丝等产品采购"> 螺钉、铁丝等产品采购</a>
+         <span>05-01</span>
+                </li>  
+  			  <li>
+               <a href="http://www.projectbidding.cn/xmxx/gjxm/2014/05/01115648151926.html" target="_blank" title="黎商胶黏剂采购"> 黎商胶黏剂采购</a>
+         <span>05-01</span>
+                </li>  
+  			  <li>
+               <a href="http://www.projectbidding.cn/xmxx/gjxm/2014/05/01115033152611.html" target="_blank" title="亚丁企业欲聚丙烯袋一批采购"> 亚丁企业欲聚丙烯袋一批采购</a>
+         <span>05-01</span>
+                </li>  
+  			  <li>
+               <a href="http://www.projectbidding.cn/xmxx/gjxm/2014/05/01114613213141.html" target="_blank" title="加纳公司中国乳制品采购"> 加纳公司中国乳制品采购</a>
+         <span>05-01</span>
+                </li>  
+  			  <li>
+               <a href="http://www.projectbidding.cn/xmxx/gjxm/2014/05/01114526883299.html" target="_blank" title="加纳公司中国渔网和渔船发动机采购"> 加纳公司中国渔网和渔船发动机采购</a>
+         <span>05-01</span>
+                </li>      		</ul>
+        </div>
+	</div>
+  	</div>
+    
+    <div class="condiv marl10">
+  	<div class="border" style="height:209px">
+  		<div class="title" >
+  		  <h2>专题项目</h2>
+  		  <a href="/xmxx/ztxm" class="floatright" target="_blank">更多>></a></div>
+    	<div class="listcon lih28 libg lia14 lia_blue li_date">
+  			<ul>
+    			
+
+<li><a href="http://www.projectbidding.cn/xmxx/ztxm/2010nsbk-zbxm/index.html" target="_blank" title='2010年世博会-招标项目' >2010年世博会-招标项目</a></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/ztxm/2010nsbh-xwsz/index.html" target="_blank" title='2010年世博会-新闻时政' >2010年世博会-新闻时政</a></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/ztxm/ldnx-zbxm/index.html" target="_blank" title='拉动内需-招标项目' >拉动内需-招标项目</a></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/ztxm/ldnx-xwsz/index.html" target="_blank" title='拉动内需-新闻时政' >拉动内需-新闻时政</a></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/ztxm/zhcj-zbxm/index.html" target="_blank" title='灾后重建-招标项目' >灾后重建-招标项目</a></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/ztxm/zhcj-xwsz/index.html" target="_blank" title='灾后重建-新闻时政' >灾后重建-新闻时政</a></li>
+
+   		</ul>
+        </div>
+	</div>
+  	</div>
+
+    
+  	  	    
+    
+  	    
+  <div class="clear"></div>
+</div>
+ 
+<div class="width mart8">
+<table cellpadding="0" cellspacing="0" border="0"><tr><td>
+ 
+ <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="650" height="95">
+        <param name="movie" value="http://www.projectbidding.cn/upfile/2014/04/55696837.swf">
+        <param name="quality" value="high">
+        <param name="wmode" value="transparent">
+        <embed src="http://www.projectbidding.cn/upfile/2014/04/55696837.swf" width="650" height="95" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" wmode="transparent"></embed></object></td> 
+<td>
+<div  class="floatright"  style="margin:0 0 0 5px;">
+<a href=http://www.projectbidding.cn/gg/xmym/ck157/2014/03/18114231861454.html target=_blank><img src="http://www.projectbidding.cn/upfile/2014/03/909333700.jpg" width="320" height="90" border=""0 /></a></div>
+</td> 
+ </table> 
+ </div>
+<div class="width mart8 padt1">
+	    
+    
+    
+  	<div class="condiv">
+  	<div class="border" style="height:209px">
+  		<div class="title" >
+  		  <h2>电力项目</h2><a href="http://www.projectbidding.cn/search/xiangmu.html?classid=13,108,163,14,15,16,18,118|所有项目分类&keyword=&date=&specialname=&hangye=电力项目|电力项目" class="floatright" target="_blank">更多>></a></div>
+    	<div class="listcon lih28 libg lia14 lia_blue li_date">
+  			<ul>
+    			
+<li><a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/03/30221751290183.html" target="_blank" title='电力线路迁改工程'>电力线路迁改工程</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/03/30221748681472.html" target="_blank" title='外电接入系统项目'>外电接入系统项目</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/03/30221743525933.html" target="_blank" title='主网技改二标段项目'>主网技改二标段项目</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/03/30221742853864.html" target="_blank" title='主网技改一标段项目'>主网技改一标段项目</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/xmdt/2015/03/30173912822168.html" target="_blank" title='光伏并网发电项目获备案'>光伏并网发电项目获备案</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/xmdt/2015/03/30173854165697.html" target="_blank" title='光伏发电站项目获备案'>光伏发电站项目获备案</a><span>03-30</span></li>
+				   		</ul>
+        </div>
+	</div>
+  	</div>
+    
+    
+    
+  	<div class="condiv marl10">
+  	<div class="border" style="height:209px">
+  		<div class="title">
+  		  <h2>冶金矿产 </h2><a href="http://www.projectbidding.cn/search/xiangmu.html?classid=13,108,163,14,15,16,18,118|所有项目分类&keyword=&date=&specialname=&hangye=冶金矿产|冶金矿产" class="floatright" target="_blank">更多>></a></div>
+    	<div class="listcon lih28 libg lia14 lia_blue li_date">
+  			<ul>
+    			
+<li><a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/03/30221753728834.html" target="_blank" title='重金属污染治理工程'>重金属污染治理工程</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/xmdt/2015/03/30173407868342.html" target="_blank" title='矿产物资发运站项目获备案'>矿产物资发运站项目获备案</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/03/30154753493634.html" target="_blank" title='再生电解铜项目'>再生电解铜项目</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/xmdt/2015/03/30141137040501.html" target="_blank" title='高炉渣综合利用项目'>高炉渣综合利用项目</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/xmdt/2015/03/30141111743684.html" target="_blank" title='煤层气建设项目'>煤层气建设项目</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/gcxmxx/nzjxm/2015/03/30115637462891.html" target="_blank" title='尾矿库扩容工程'>尾矿库扩容工程</a><span>03-30</span></li>
+						</ul>
+        </div>
+	</div>
+  	</div>
+    
+    
+    
+  	<div class="condiv marl10" >
+  	<div class="border" style="height:209px">
+  		<div class="title">
+  		  <h2>化工医药 </h2><a href="http://www.projectbidding.cn/search/xiangmu.html?classid=13,108,163,14,15,16,18,118|所有项目分类&keyword=&date=&specialname=&hangye=化工医药|化工医药" class="floatright" target="_blank">更多>></a></div>
+    	<div class="listcon lih28 libg lia14 lia_blue li_date">
+  			<ul>
+    			
+<li><a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/03/30221757259884.html" target="_blank" title='空分项目'>空分项目</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/xmdt/2015/03/30175340822938.html" target="_blank" title='加油加气站项目获备案'>加油加气站项目获备案</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/xmdt/2015/03/30174744540835.html" target="_blank" title='化学品项目获备案'>化学品项目获备案</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/xmdt/2015/03/30174723993365.html" target="_blank" title='有机肥项目获备案'>有机肥项目获备案</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/xmdt/2015/03/3017471213483.html" target="_blank" title='化肥项目获备案'>化肥项目获备案</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/xmdt/2015/03/30174652212476.html" target="_blank" title='乙酰苯胺项目获备案'>乙酰苯胺项目获备案</a><span>03-30</span></li>
+				    		</ul>
+        </div>
+	</div>
+  	</div>
+    
+    
+    
+  	<div class="condiv">
+  	<div class="border" style="height:209px">
+  		<div class="title">
+  		  <h2>建材项目</h2><a href="http://www.projectbidding.cn/search/xiangmu.html?classid=13,108,163,14,15,16,18,118|所有项目分类&keyword=&date=&specialname=&hangye=建材项目|建材项目" class="floatright" target="_blank">更多>></a></div>
+    	<div class="listcon lih28 libg lia14 lia_blue li_date">
+  			<ul>
+    			
+<li><a href="http://www.projectbidding.cn/xmxx/xmdt/2015/03/301759371187.html" target="_blank" title='石材项目获备案'>石材项目获备案</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/xmdt/2015/03/30175915697390.html" target="_blank" title='混凝土建设项目获备案'>混凝土建设项目获备案</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/xmdt/2015/03/30175311587296.html" target="_blank" title='废钢扩建项目获备案'>废钢扩建项目获备案</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/03/30170351478185.html" target="_blank" title='钢制管件项目'>钢制管件项目</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/03/30162249853577.html" target="_blank" title='防盗门项目'>防盗门项目</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/xmdt/2015/03/30152343400375.html" target="_blank" title='抛光砖生产线项目'>抛光砖生产线项目</a><span>03-30</span></li>
+				    		</ul>
+        </div>
+	</div>
+  	</div>
+
+        <div class="condiv marl10">
+  	<div class="border" style="height:209px">
+  		<div class="title">
+  		  <h2>文教旅游 </h2><a href="http://www.projectbidding.cn/search/xiangmu.html?classid=13,108,163,14,15,16,18,118|所有项目分类&keyword=&date=&specialname=&hangye=文教旅游|文教旅游" class="floatright" target="_blank">更多>></a></div>
+    	<div class="listcon lih28 libg lia14 lia_blue li_date">
+  			<ul>
+    			 	
+<li><a href="http://www.projectbidding.cn/xmxx/xmdt/2015/03/27180927783864.html" target="_blank" title='旅游开发项目获备案'>旅游开发项目获备案</a><span>03-27</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/xmdt/2015/03/27100450627653.html" target="_blank" title='市文化旅游综合服务中心项目开工'>市文化旅游综合服务中心项目开工</a><span>03-27</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/xmdt/2015/03/2618032595551.html" target="_blank" title='乡村旅游项目获备案'>乡村旅游项目获备案</a><span>03-26</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/xmdt/2015/03/26140554814594.html" target="_blank" title='武当大明峰生态文化旅游区总体规划方案'>武当大明峰生态文化旅游区总体规…</a><span>03-26</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/xmdt/2015/03/2510591723679.html" target="_blank" title='巴马瑶族自治县城区旅游景点项目开建'>巴马瑶族自治县城区旅游景点项目…</a><span>03-25</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/xmdt/2015/03/24180607424300.html" target="_blank" title='旅游景区建设项目获备案'>旅游景区建设项目获备案</a><span>03-24</span></li>
+				</ul>
+        </div>
+	</div>
+  	</div>
+    
+
+
+    
+    
+    
+  	<div class="condiv marl10">
+  	<div class="border" style="height:209px">
+  		<div class="title">
+  		  <h2>环保项目</h2><a href="http://www.projectbidding.cn/search/xiangmu.html?classid=13,108,163,14,15,16,18,118|所有项目分类&keyword=&date=&specialname=&hangye=环保项目|环保项目" class="floatright" target="_blank">更多>></a></div>
+    	<div class="listcon lih28 libg lia14 lia_blue li_date">
+  			<ul>
+    			
+<li><a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/03/30221756634258.html" target="_blank" title='污水管网二期工程'>污水管网二期工程</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/03/30221757384942.html" target="_blank" title='污水管网一期工程'>污水管网一期工程</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/03/30221753728834.html" target="_blank" title='重金属污染治理工程'>重金属污染治理工程</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/03/30221748087345.html" target="_blank" title='污水处理厂提标改造项目'>污水处理厂提标改造项目</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/03/30221740462900.html" target="_blank" title='污水处理系统工程'>污水处理系统工程</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/01/09184609859446.html" target="_blank" title='污水处理工程（更新）'>污水处理工程（更新）</a><span>03-30</span></li>
+				    		</ul>
+        </div>
+	</div>
+  	</div>    
+  <div class="clear"></div>
+</div>
+
+
+<div class="width mart8 padt1">
+	
+  	<div class="condiv">
+  	<div class="border" style="height:209px">
+  		<div class="title">
+  		  <h2>市政项目</h2><a href="http://www.projectbidding.cn/search/xiangmu.html?classid=13,108,163,14,15,16,18,118|所有项目分类&keyword=&date=&specialname=&hangye=市政项目|市政项目" class="floatright" target="_blank">更多>></a></div>
+    	<div class="listcon lih28 libg lia14 lia_blue li_date">
+  			<ul>
+    			 	
+<li><a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/03/3022180111849.html" target="_blank" title='第二水源工程'>第二水源工程</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/03/30221800493747.html" target="_blank" title='公园项目'>公园项目</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/03/30221756634258.html" target="_blank" title='污水管网二期工程'>污水管网二期工程</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/03/30221757384942.html" target="_blank" title='污水管网一期工程'>污水管网一期工程</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/03/30221752556991.html" target="_blank" title='人行景观桥项目'>人行景观桥项目</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/03/30221751931331.html" target="_blank" title='道路绿化工程'>道路绿化工程</a><span>03-30</span></li>
+				</ul>
+        </div>
+	</div>
+  	</div>
+    
+    
+    
+  	<div class="condiv marl10">
+  	<div class="border" style="height:209px">
+  		<div class="title">
+  		  <h2>房产建筑 </h2><a href="http://www.projectbidding.cn/search/xiangmu.html?classid=13,108,163,14,15,16,18,118|所有项目分类&keyword=&date=&specialname=&hangye=房产建筑|房产建筑" class="floatright" target="_blank">更多>></a></div>
+    	<div class="listcon lih28 libg lia14 lia_blue li_date">
+  			<ul>
+    			
+<li><a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/01/26214144978894.html" target="_blank" title='学校项目（更新）'>学校项目（更新）</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2014/10/20215058935940.html" target="_blank" title='商业街项目（更新）'>商业街项目（更新）</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/03/30221806165975.html" target="_blank" title='医院工程'>医院工程</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/03/30221804322642.html" target="_blank" title='广场项目'>广场项目</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/03/30221801681447.html" target="_blank" title='中国电信机楼工程'>中国电信机楼工程</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/03/30221759947196.html" target="_blank" title='职业中等专业学校项目'>职业中等专业学校项目</a><span>03-30</span></li>
+			   		</ul>
+        </div>
+	</div>
+  	</div>
+    
+    
+    
+  	<div class="condiv marl10">
+  	<div class="border" style="height:209px">
+  		<div class="title">
+  		  <h2>交通运输 </h2><a href="http://www.projectbidding.cn/search/xiangmu.html?classid=13,108,163,14,15,16,18,118|所有项目分类&keyword=&date=&specialname=&hangye=交通运输|交通运输" class="floatright" target="_blank">更多>></a></div>
+    	<div class="listcon lih28 libg lia14 lia_blue li_date">
+  			<ul>
+    			
+<li><a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/03/08222312616745.html" target="_blank" title='公路工程（更新）'>公路工程（更新）</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/03/30221803493716.html" target="_blank" title='匝道工程'>匝道工程</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/03/30221759415794.html" target="_blank" title='县级公路维修改造工程'>县级公路维修改造工程</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/03/3022174633798.html" target="_blank" title='高速公路连接线建设工程'>高速公路连接线建设工程</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/03/30221745697317.html" target="_blank" title='一级公路工程'>一级公路工程</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2014/12/0118370452437.html" target="_blank" title='码头工程（更新）'>码头工程（更新）</a><span>03-30</span></li>
+					</ul>
+        </div>
+	</div>
+  	</div>
+    
+    
+    
+  	<div class="condiv">
+  	<div class="border" style="height:209px">
+  		<div class="title">
+  		  <h2>轻纺食品 </h2><a href="http://www.projectbidding.cn/search/xiangmu.html?classid=13,108,163,14,15,16,18,118|所有项目分类&keyword=&date=&specialname=&hangye=轻纺食品|轻纺食品" class="floatright" target="_blank">更多>></a></div>
+    	<div class="listcon lih28 libg lia14 lia_blue li_date">
+  			<ul>
+    			
+<li><a href="http://www.projectbidding.cn/xmxx/xmdt/2015/03/30175952837575.html" target="_blank" title='乳业项目获备案'>乳业项目获备案</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/xmdt/2015/03/30174405275768.html" target="_blank" title='印刷生产项目获备案'>印刷生产项目获备案</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/xmdt/2015/03/30174350118112.html" target="_blank" title='食用菌项目获备案'>食用菌项目获备案</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/xmdt/2015/03/30174326165784.html" target="_blank" title='食品项目获备案'>食品项目获备案</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/xmdt/2015/03/3017430721258.html" target="_blank" title='饮料生产线项目获备案'>饮料生产线项目获备案</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/xmdt/2015/03/30174238243673.html" target="_blank" title='挂面生产线建设项目获备案'>挂面生产线建设项目获备案</a><span>03-30</span></li>
+				    		</ul>
+        </div>
+	</div>
+  	</div>
+    
+    
+    
+  	<div class="condiv marl10">
+  	<div class="border" style="height:209px">
+  		<div class="title">
+  		  <h2>能源项目</h2><a href="http://www.projectbidding.cn/search/xiangmu.html?classid=13,108,163,14,15,16,18,118|所有项目分类&keyword=&date=&specialname=&hangye=能源项目|能源项目" class="floatright" target="_blank">更多>></a></div>
+    	<div class="listcon lih28 libg lia14 lia_blue li_date">
+  			<ul>
+    			
+<li><a href="http://www.projectbidding.cn/xmxx/xmdt/2015/03/30175340822938.html" target="_blank" title='加油加气站项目获备案'>加油加气站项目获备案</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/03/30154509493338.html" target="_blank" title='原油管道项目'>原油管道项目</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/xmdt/2015/03/3014115171273.html" target="_blank" title='双河站增压工程'>双河站增压工程</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/xmdt/2015/03/30141111743684.html" target="_blank" title='煤层气建设项目'>煤层气建设项目</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/xmdt/2015/03/30114130634897.html" target="_blank" title='生活区液化气管线更换改造项目'>生活区液化气管线更换改造项目</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/gcxmxx/nzjxm/2015/03/30115634337169.html" target="_blank" title='配气站项目'>配气站项目</a><span>03-30</span></li>
+			    		</ul>
+        </div>
+	</div>
+  	</div>
+    
+    
+    
+  	<div class="condiv marl10">
+  	<div class="border" style="height:209px">
+  		<div class="title">
+  		  <h2>农林水利</h2><a href="http://www.projectbidding.cn/search/xiangmu.html?classid=13,108,163,14,15,16,18,118|所有项目分类&keyword=&date=&specialname=&hangye=农林水利|农林水利" class="floatright" target="_blank">更多>></a></div>
+    	<div class="listcon lih28 libg lia14 lia_blue li_date">
+  			<ul>
+    			
+<li><a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/03/30221805337511.html" target="_blank" title='河流治理工程'>河流治理工程</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/03/30221804697955.html" target="_blank" title='河流治理工程'>河流治理工程</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/03/30221758837934.html" target="_blank" title='海堤工程'>海堤工程</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/03/30221749806958.html" target="_blank" title='水库工程'>水库工程</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/gcxmxx/ck108/2015/03/30221742212979.html" target="_blank" title='粮食生产能力规划田间工程'>粮食生产能力规划田间工程</a><span>03-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/xmdt/2015/03/30180008775322.html" target="_blank" title='农业项目获备案'>农业项目获备案</a><span>03-30</span></li>
+				    		</ul>
+        </div>
+	</div>
+  	</div>    
+  <div class="clear"></div>
+</div>
+
+
+
+<div class="width mart8 padt1">
+	
+  	    
+    
+  	<div class="condiv">
+  	<div class="border" style="height:209px">
+  		<div class="title">
+  		  <h2>其他项目  </h2><a href="http://www.projectbidding.cn/search/xiangmu.html?classid=13,108,163,14,15,16,18,118|所有项目分类&keyword=&date=&specialname=&hangye=其他项目|其他项目" class="floatright" target="_blank">更多>></a></div>
+    	<div class="listcon lih28 libg lia14 lia_blue li_date">
+  			<ul>
+    			
+<li><a href="http://www.projectbidding.cn/xmxx/xmdt/2015/01/30165909834374.html" target="_blank" title='动画《吉象三宝》制作及衍生品开发项目获备案'>动画《吉象三宝》制作及衍生品开…</a><span>01-30</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/xmdt/2015/01/16155313069628.html" target="_blank" title='橡塑合金耐热汽车V带技术研发及产业化项目获备案'>橡塑合金耐热汽车V带技术研发及…</a><span>01-16</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/xmdt/2015/01/16153158132318.html" target="_blank" title='年产2万套家具建设项目获备案'>年产2万套家具建设项目获备案</a><span>01-16</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/xmdt/2015/01/14165803250304.html" target="_blank" title='大禾冷链物流配送中心项目获备案'>大禾冷链物流配送中心项目获备案</a><span>01-14</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/xmdt/2015/01/14165420296502.html" target="_blank" title='综合物流园及农产品冷藏、冷冻与运输项目获备案'>综合物流园及农产品冷藏、冷冻与…</a><span>01-14</span></li>
+
+<li><a href="http://www.projectbidding.cn/xmxx/xmdt/2015/01/14164738859273.html" target="_blank" title='物流项目获备案'>物流项目获备案</a><span>01-14</span></li>
+				   		</ul>
+        </div>
+	</div>
+  	</div>
+    
+    
+    
+  	  <div class="clear"></div>
+
+</div>
+<div class="width footer">
+  <div class="fnav"><a href="http://projectbidding.cn/syxx/dbxx/2012/09/10135957890909.html">关于我们</a>|<a href="http://projectbidding.cn/syxx/hyfw/2012/09/10140215140823.html">会员服务</a>|<a href="http://projectbidding.cn/syxx/agfw/2013/01/31100953887824.html">广告服务</a>|<a href="http://projectbidding.cn/hyzx/rczp/index.html">最新职位</a>|<a href="http://projectbidding.cn/syxx/dbxx/2012/09/12091834203605.html">客服中心</a>|<a href="http://projectbidding.cn/hyzx/jdal/index.html">成功案例</a>|<a href="http://www.projectbidding.cn/hyzx/zhxx/index.html">展会信息</a></div>
+<DIV class=blank6></DIV><!-- 页脚 -->
+<DIV class=foot>
+<DIV class=copyRight>中华人民共和国 增值电信业务经营许可证 编号： 苏B2-20040129 
+<BR> [2002-2015] 中国建设工程招标网 中招工程咨询有限公司 版权所有　<BR>
+电话：400 6071880<BR>
+<IMG alt="" src="/images2012/biaoshi.gif"></br><A href="http://www.miibeian.gov.cn/">苏ICP备10049727号</A><br><br><script src=http://s16.cnzz.com/stat.php?id=1298096&web_id=1298096&show=pic1 language=JavaScript charset=gb2312></script>
+  </DIV></DIV></body>
+</html>
+
